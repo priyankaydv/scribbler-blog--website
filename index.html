@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page </title>
+  <!-- Adding css files index and header  -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header.css">
+
+  <meta name="viewport" content="width-device-width , initial-scale=1.0">
+  <!-- addding font family style link -->
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <!-- addding bootstrap style link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <div class="button">
+        <!-- using bootstrap classes and id -->
+        <button type="button" class="SignIn" data-toggle="modal" data-target="#signInModal">
+          Sign In</button>
+
+        <button type="button" class="SignUp" data-toggle="modal" data-target="#SignUpModal">
+          Sign Up</button>
+
+      </div>
+      <h2 class="logo">ScriBBler</h2>
+      <p class="header-font">Explore, Imagine, Create</p>
+
+
+      
+      
+    </div>
+
+    <div class="content">
+      <!-- linking to another page through a tag -->
+      <a href="blogspot.html"> <button type="button">All Posts</button></a>
+      <button type="button" data-toggle="modal" data-target="#CreateP">Create Post</button>
+
+    </div>
+  </div>
+  <div class="container">
+    <!-- Sign In modal form -->
+    <div class="modal fade" id="signInModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 align="center" class="modal-title"> Welcome Back</h4>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
+
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <p>User Name </p>
+                <input type="text" id="input-field" class="form-control" placeholder="Enter Username" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <p>Password</p>
+                <input type="password" id="input-field" class="form-control" placeholder="Enter Password" required="required">
+              </div>
+              
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <div class="form-group">
+
+            </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign In">
+            <br><br>
+            <p align="left">Don't have an account? </p>
+           <a style="cursor: pointer;" data-toggle="modal" data-target="#SignUpModal" data-dismiss="modal">Sign Up</a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Sign Up modal form  -->
+    <div class="modal fade" id="SignUpModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 align="center" class="modal-title"> Get Started</h4>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
+              <div class="form-group">
+                <p >Full Name</p>
+                <input type="text" id="input-field" class="form-control" placeholder="Enter Full Name" required="true">
+              </div>
+              <br>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <p>User Name </p>
+                <input type="text" id="input-field" class="form-control" placeholder="Enter Username" required="*">
+              </div>
+              <br>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <p>Password</p>
+                <input type="password" id="input-field" class="form-control" placeholder="Enter Password" required="required">
+              </div>
+              <br>
+              <div class="form-group">
+                <p>Confirm Password</p>
+                <input type="password" id="input-field" class="form-control" placeholder="Enter Confirm Password"
+                  required="required">
+              </div>
+              
+
+
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <div class="form-group">
+
+            </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign Up">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <!-- Modal for post creation -->
+  <div class="modal fade" id="CreateP" role="dialog">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 align="center" class="modal-title"> Pen Your Post</h4>
+        </div>
+        <div class="modal-body">
+          <form action="/examples/actions/confirmation.php" method="post">
+
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <p>Title: </p>
+              <input id="input-field" style="height:50px;width:50%; font-size:14pt;" type="text" class="form-control"
+                required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <p>Content: </p>
+              <input id="input-field" style="height:250px;font-size:22pt;" type="text" class="form-control"
+                required="required">
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+
+          </div> 
+          <button  type="submit" class="btn-create "
+          >Create</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

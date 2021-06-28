@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Post Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding bootstrap style  link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Adding local style classes  -->
+    <link rel="stylesheet " href="css/post.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Adding font family link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Adding bootstrap script links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Posts</title>
+</head>
+
+<body>
+    <!-- Adding the header part from first page  -->
+    <h2 class="logo">ScriBBler</h2>
+    <p class="header-font">Explore, Imagine, Create</p>
+
+
+    <div class="button">
+        <button type="button" class="SignIn" data-toggle="modal" data-target="#signInModal">
+            Sign In</button>
+
+        <button type="button" class="SignUp" data-toggle="modal" data-target="#SignUpModal">
+            Sign Up</button>
+
+    </div>
+    </div>
+
+
+    </div>
+    <div class="container">
+        <div class="modal fade" id="signInModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Welcome Back</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/examples/actions/confirmation.php" method="post">
+
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <p>User Name </p>
+                                <input type="text" id="input-field" class="form-control" placeholder="Username"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-lock"></i>
+                                <p>Password</p>
+                                <input type="password" id="input-field" class="form-control" placeholder="Password"
+                                    required="required">
+                            </div>
+                            <br>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+
+                        </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign In">
+                        <br><br>
+                        <p align="left">Don't have an account? </p>
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#SignUpModal"
+                            data-dismiss="modal">Sign Up</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal fade" id="trash" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Are you sure you want to delete?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="SignUpModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Get Started</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/examples/actions/confirmation.php" method="post">
+                            <div class="form-group">
+                                <p>Full Name</p>
+                                <input type="text" id="input-field" class="form control" placeholder="Full Name"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <p>User Name </p>
+                                <input type="text" id="input-field" class="form-control" placeholder="Username"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-lock"></i>
+                                <p>Password</p>
+                                <input type="password" id="input-field" class="form-control" placeholder="Password"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <p>Confirm Password</p>
+                                <input type="password" id="input-field" class="form-control"
+                                    placeholder="Confirm Password" required="required">
+                            </div>
+                            <br>
+
+
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+
+                        </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign Up">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- Adding paragraph and assigning id and class to it for manipulation through dom  -->
+
+    <h1 align="center" id="editTitle" contenteditable="false"> The Legacy of Jimi Hendrix</h1><br><br>
+    <div align="right">
+        <input class="buttonBg" type="button" id="save" value="Edit" onclick="saveEdits()" />
+    </div>
+    <br><br>
+    <h2>Jimi</h2> <br>
+    <div class="ParaEdit" id="editPara" contenteditable="false">
+        Jimi Hendrix, arguably the greatest instrumentalist in the history of rock music".
+        Born in Seattle, Washington, Hendrix began playing guitar at the age of 15. In 1961, he enlisted in the US Army,
+        but was discharged the following year. Soon afterward, he moved to Clarksville, Tennessee, and began playing
+        gigs on the chitlin' circuit, earning a place in the Isley Brothers' backing band and later with Little Richard,
+        with whom he continued to work through mid-1965. He then played with Curtis Knight and the Squires before moving
+        to England in late 1966 after bassist Chas Chandler of the Animals became his manager. Within months, Hendrix
+        had earned three UK top ten hits with the Jimi Hendrix Experience: "Hey Joe", "Purple Haze", and "The Wind Cries
+        Mary".
+        Born in Seattle, Washington, Hendrix began playing guitar at the age of 15. In 1961, he enlisted in the US Army,
+        but was discharged the following year. Soon afterward, he moved to Clarksville then Nashville, Tennessee, and
+        began playing gigs on the chitlin' circuit, earning a place in the Isley Brothers' backing band and later with
+        Little Richard, with whom he continued to work through mid-1965. He then played with Curtis Knight and the
+        Squires before moving to England in late 1966 after bassist Chas Chandler of the Animals became his manager.
+        Within months, Hendrix had earned three UK top ten hits with the Jimi Hendrix.
+        Hendrix was the recipient of several music awards during his lifetime and posthumously. In 1967, readers of
+        Melody Maker voted him the Pop Musician of the Year and in 1968, Billboard named him the Artist of the Year and
+        Rolling Stone declared him the Performer of the Year. Disc and Music Echo honored him with the World Top
+        Musician of 1969 and in 1970, Guitar Player named him the Rock Guitarist of the Year.
+    </div>
+
+
+    <p id="toggle" style="display: none;">1</p>
+    <br><br><br>
+    <!-- Adding like button  -->
+    <div align="left">
+        <button class="buttonBg" id="clickme">Like</button>
+        <p class="writing" id="hide"><i>Be the first one to like this!</i></p>
+
+        <h5 id="temp"> </h5>
+    </div>
+    <br><br><br>
+
+    <div align="center">
+        <input style="height:100px ;width:500px;font-size:14pt;" type="text" class="form-control"
+            placeholder="leave a comment..." required="required" id="example">
+
+        <!-- Adding comment button  -->
+        <br>
+        <button id="sent" class="buttonBg">Comment</button>
+        <br><br><br>
+        <p>All Comments</p>
+        <h1 class="commentBox" id="paraBox">
+        </h1>
+    </div>
+    <!-- Adding script file  -->
+    <script src="js/post.js"></script>
+
+
+
+</body>
+
+</html>
+
+</body>
+
+</html>

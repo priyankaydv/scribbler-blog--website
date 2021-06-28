@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blogging Page</title>
+    <!-- Adding css file  -->
+    <link rel="stylesheet" href="css/blogspot.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Adding links to use online library of trash button and three dots button  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Adding bootstrap link  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Adding font family  -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Adding bootstrap script files  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body style="background-color: orange;">
+    
+    <div class="button">
+        <button type="button" class="SignIn" data-toggle="modal" data-target="#signInModal">
+            Sign In</button>
+
+        <button type="button" class="SignUp" data-toggle="modal" data-target="#SignUpModal">
+            Sign Up</button>
+
+    </div>
+    <!-- Adding the same content as that of first page  -->
+    <h2 class="logo">ScriBBler</h2>
+    <p class="header-font">Explore Imagine Create</p>
+
+
+    
+
+
+    </div>
+    <div class="container">
+        <div class="modal fade" id="signInModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Welcome Back</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/examples/actions/confirmation.php" method="post">
+
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <p>User Name </p>
+                                <input type="text" id="input-field" class="form-control" placeholder="Enter Username"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-lock"></i>
+                                <p>Password</p>
+                                <input type="password" id="input-field" class="form-control" placeholder="Enter Password"
+                                    required="required">
+                            </div>
+                        
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+
+                        </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign In">
+                        <br><br>
+                        <p align="left">Don't have an account? </p>
+                        <a style="cursor: pointer;" data-toggle="modal" data-target="#SignUpModal"
+                            data-dismiss="modal">Sign Up</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Adding the modal for trash button  -->
+        <div class="modal fade" id="trash" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Are you sure you want to delete?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <!-- Dismissing modal on clicking No  -->
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="SignUpModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 align="center" class="modal-title"> Get Started</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/examples/actions/confirmation.php" method="post">
+                            <div class="form-group">
+                                <p>Full Name</p>
+                                <input type="text" id="input-field" class="form control" placeholder="Full Name"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <p>User Name </p>
+                                <input type="text" id="input-field" class="form-control" placeholder="Username"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <i class="fa fa-lock"></i>
+                                <p>Password</p>
+                                <input type="password" id="input-field" class="form-control" placeholder="Password"
+                                    required="required">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <p>Confirm Password</p>
+                                <input type="password" id="input-field" class="form-control"
+                                    placeholder="Confirm Password" required="required">
+                            </div>
+                           
+
+
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+
+                        </div> <input type="submit" class="btn btn-success btn-block btn-lg " value="Sign Up">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- making 5 boxes through flex box and integrating trash and 3dots button in it -->
+
+    <div class="main">
+
+        <div class="content-flex">
+
+            <div class="flexLeft">Jimi</div>
+            <div class="flexIn">
+                <button class="RightAl" data-toggle="modal" data-target="#trash" class="btn"><i
+                        class="fa fa-trash"></i></button>
+                <h4>
+                    Hello there ! This is Post 1!</h4><br><br>
+
+                Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded
+                the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His
+                boundless drive, technical ability and creative application of such effects as distortion forever
+                transformed the sound of rock and roll. While creating his
+                <br>
+                <!-- Opening 3rd page through ellipsis(3dots button) -->
+                <a href="post.html"> <button class="RightAl"><i class="fa fa-ellipsis-h"></i></button> </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="content-flex">
+
+            <div class="flexLeft">Jimi</div>
+            <div class="flexIn">
+                <button class="RightAl" data-toggle="modal" data-target="#trash" class="btn"><i
+                        class="fa fa-trash"></i></button>
+                <h4> Hello there ! This is Post 2!</h4><br><br>
+
+                Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded
+                the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His
+                boundless drive, technical ability and creative application of such effects as distortion forever
+                transformed the sound of rock and roll. While creating his
+
+                <br>
+                <a href="post.html"> <button class="RightAl"><i class="fa fa-ellipsis-h"></i></button> </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="main">
+
+        <div class="content-flex">
+
+            <div class="flexLeft">Jimi</div>
+            <div class="flexIn">
+                <button class="RightAl" data-toggle="modal" data-target="#trash" class="btn"><i
+                        class="fa fa-trash"></i></button>
+                <h4> Hello there ! This is Post 3!</h4><br><br>
+
+                Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded
+                the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His
+                boundless drive, technical ability and creative application of such effects as distortion forever
+                transformed the sound of rock and roll. While creating his
+                <br>
+                <a href="post.html"> <button class="RightAl"><i class="fa fa-ellipsis-h"></i></button> </a>
+            </div>
+
+        </div>
+
+        <div class="content-flex">
+
+            <div class="flexLeft">Jimi</div>
+            <div class="flexIn">
+                <button class="RightAl" data-toggle="modal" data-target="#trash" class="btn"><i
+                        class="fa fa-trash"></i></button>
+                <h4>Hello there ! This is Post 4!</h4><br><br>
+
+                Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded
+                the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His
+                boundless drive, technical ability and creative application of such effects as distortion forever
+                transformed the sound of rock and roll. While creating his
+
+
+                <br>
+                <a href="post.html"> <button class="RightAl"><i class="fa fa-ellipsis-h"></i></button> </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main last">
+
+        <div class="content-flex">
+
+            <div class="flexLeft">Jimi</div>
+            <div class="flexIn">
+                <button class="RightAl" data-toggle="modal" data-target="#trash" class="btn"><i
+                        class="fa fa-trash"></i></button>
+                <h4>Hello there ! This is Post 5 !</h4><br><br>
+
+                Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded
+                the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His
+                boundless drive, technical ability and creative application of such effects as distortion forever
+                transformed the sound of rock and roll. While creating his
+
+
+                <a href="post.html"> <button class="RightAl"><i class="fa fa-ellipsis-h"></i></button> </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
