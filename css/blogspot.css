@@ -1,0 +1,57 @@
+.RightAl{
+    float: right;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(129, 245, 129);
+    width: 550px;
+    margin: 40px;
+}
+.flexLeft {
+    display: flex;
+    flex-direction: row;
+    width: 100 px;
+    margin: 30px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
+    display: table-cell;
+}
+div.flexIn {
+    background-color: rgba(215, 156, 236, 0.774);
+    width: 110px;
+    margin: 10px;
+    padding: 12px;
+    height: 250px;
+    overflow: hidden;
+    flex-grow: 5;
+}
+div.flexIn h1 {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+header {
+	padding-top: 100px;
+	
+	font-size: 20px;
+	
+}
+.last{
+    justify-content: center;
+
+}
+p.header-font {
+    color: white;
+}

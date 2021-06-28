@@ -1,0 +1,26 @@
+.ParaEdit{
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 90%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.commentBox{
+    background-color: rgba(239, 241, 243, 0.658);
+    width: 50%;
+    padding-bottom: 10%;
+}
+.pcom{
+    margin: 12px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+body{
+    background-color: rgba(216, 168, 184, 0.548);
+}
+.writing{
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.buttonBg{
+    background-color: rgb(243, 98, 123);
+}
